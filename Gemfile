@@ -36,6 +36,7 @@ gem 'rspec-rails'
 gem 'factory_girl'
 gem 'simple_form'
 gem 'paperclip'
+gem 'factory_girl_rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
