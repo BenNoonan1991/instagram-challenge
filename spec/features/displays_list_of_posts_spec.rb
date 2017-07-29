@@ -10,4 +10,12 @@ feature 'Index displays list of posts' do
     expect(page).to have_content("Post 2")
     expect(page).to have_css("img[src*='images.jpeg']")
   end
+
+  scenario 'Clicking on image in index takes user to original post' do
+    post = create(:post)
+
+    visit '/'
+    find(:xpath, "//a[contains(@href,'posts/1')]").click
+    expect(page.current_path).to eq(post_path(post))
+  end
 end
