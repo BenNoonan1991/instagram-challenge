@@ -37,6 +37,10 @@ gem 'factory_girl'
 gem 'simple_form'
 gem 'paperclip'
 gem 'factory_girl_rails'
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
+gem "jquery-ui-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
