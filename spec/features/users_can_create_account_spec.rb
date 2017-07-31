@@ -5,7 +5,7 @@ feature 'Creating a new user' do
   background do
     visit '/'
     click_link 'Register'
-  end
+  end 
 
   scenario "New users can create an accout" do
     fill_in 'User name', with: "Test_name"

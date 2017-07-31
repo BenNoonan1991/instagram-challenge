@@ -1,9 +1,17 @@
-require 'rails_helper.rb'
+require 'rails_helper'
 
 feature 'Creating posts' do
+  background do
+    user = create :user
+    visit '/'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_button 'Log in'
+  end
+
   scenario 'can create a post' do
     visit '/'
-    click_link 'New Post'
+    click_link 'New post'
     attach_file('Image', "spec/files/images.jpeg")
     fill_in 'Caption', with: '#London Skyline'
     click_button 'Create Post'
@@ -13,7 +21,7 @@ feature 'Creating posts' do
 
   scenario 'posts must contain an image' do
     visit '/'
-    click_link 'New Post'
+    click_link 'New post'
     fill_in 'Caption', with: "#Test"
     click_button 'Create Post'
     expect(page).to have_content('Posts must contain an image')
