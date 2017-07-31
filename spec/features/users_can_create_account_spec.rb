@@ -15,4 +15,12 @@ feature 'Creating a new user' do
     click_button 'Sign up'
     expect(page).to have_content("Welcome! You have signed up successfully")
   end
+
+  scenario 'Users cannot sign in without a username' do
+    fill_in 'Email', with: 'test@example.com'
+    fill_in('Password', with: "123456", :match => :prefer_exact)
+    fill_in('Password confirmation', with: "123456", :match => :prefer_exact)
+    click_button 'Sign up'
+    expect(page).to have_content("can't be blank")
+  end
 end
