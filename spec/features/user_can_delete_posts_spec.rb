@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 feature 'Deleting posts' do
-  background do  
+  background do
     user = create :user
-    post = create(:post, caption: 'Test')
+    post = create(:post, caption: 'Test', user_id: user.id)
 
     visit '/'
     fill_in 'Email', with: user.email

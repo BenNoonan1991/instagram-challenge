@@ -3,8 +3,9 @@ require 'rails_helper'
 feature 'Editing posts' do
 
   background do
-    post = create(:post)
     user = create :user
+    post = create(:post, user: user)
+
 
     visit '/'
     fill_in 'Email', with: user.email

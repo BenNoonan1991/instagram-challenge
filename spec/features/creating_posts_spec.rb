@@ -17,6 +17,7 @@ feature 'Creating posts' do
     click_button 'Create Post'
     expect(page).to have_content('#London Skyline')
     expect(page).to have_css("img[src*='images.jpeg']")
+    expect(page).to have_content('Ben')
   end
 
   scenario 'posts must contain an image' do
@@ -24,6 +25,6 @@ feature 'Creating posts' do
     click_link 'New post'
     fill_in 'Caption', with: "#Test"
     click_button 'Create Post'
-    expect(page).to have_content('Posts must contain an image')
+    expect(page).to have_content('Your new post couldn\'t be created')
     end
 end
