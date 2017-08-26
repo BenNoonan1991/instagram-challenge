@@ -1,24 +1,21 @@
-# README
+# Instagram Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An alternate version of Instagram, a challenge which was part of the Makers Academy course.
 
-Things you may want to cover:
+## Installation:
 
-* Ruby version
+Clone this repo, then:  
+bundle install
+rake db:create
+rake db:migrate  
 
-* System dependencies
+## To run test suite:  
+bundle exec rspec  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technologies:  
+Ruby(2.4.0)    
+Rspec  
+Capybara  
+Javascript  
+HTML  
+CSS    
