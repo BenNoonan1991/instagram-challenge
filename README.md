@@ -5,8 +5,8 @@ An alternate version of Instagram, a challenge which was part of the Makers Acad
 ## Installation:
 
 Clone this repo, then:  
-bundle install
-rake db:create
+bundle install  
+rake db:create  
 rake db:migrate  
 
 ## To run test suite:  
